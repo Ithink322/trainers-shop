@@ -1,3 +1,11 @@
+/* go back to the previous psge if user click on .container-blog__advertise-btn-back-to-previous-page starts */
+const btn = document.querySelector(
+  ".container-blog__advertise-btn-back-to-previous-page"
+);
+btn.onclick = function () {
+  history.back(-1);
+};
+/* go back to the previous psge if user click on .container-blog__advertise-btn-back-to-previous-page ends */
 /* show and hide .container-blog__questions-section-subtext starts */
 $(function () {
   let counter = 0;

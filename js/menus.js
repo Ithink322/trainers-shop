@@ -1,100 +1,3 @@
-/* show and hide border-bottom .header__text-1 and .header__text-2 due to hover on .header__triangle-1 and .header__triangle-2 starts */
-const triangle_header_border_bottom_1 = document.querySelector(
-    ".header__triangle-1"
-  ),
-  triangle_header_border_bottom_2 = document.querySelector(
-    ".header__triangle-2"
-  );
-let text_header_border_bottom_1 = document.querySelector(".header__text-1"),
-  text_header_border_bottom_2 = document.querySelector(".header__text-2");
-triangle_header_border_bottom_1.onmouseover = function () {
-  text_header_border_bottom_1.style.borderBottom = "3px solid #f53b49";
-};
-triangle_header_border_bottom_1.onmouseout = function () {
-  text_header_border_bottom_1.style.borderBottom = "3px solid #2a2c38";
-};
-triangle_header_border_bottom_2.onmouseover = function () {
-  text_header_border_bottom_2.style.borderBottom = "3px solid #f53b49";
-};
-triangle_header_border_bottom_2.onmouseout = function () {
-  text_header_border_bottom_2.style.borderBottom = "3px solid #2a2c38";
-};
-text_header_border_bottom_1.onmouseover = function () {
-  text_header_border_bottom_1.style.borderBottom = "3px solid #f53b49";
-};
-text_header_border_bottom_1.onmouseout = function () {
-  text_header_border_bottom_1.style.borderBottom = "3px solid #2a2c38";
-};
-text_header_border_bottom_2.onmouseover = function () {
-  text_header_border_bottom_2.style.borderBottom = "3px solid #f53b49";
-};
-text_header_border_bottom_2.onmouseout = function () {
-  text_header_border_bottom_2.style.borderBottom = "3px solid #2a2c38";
-};
-/* show and hide border-bottom .header__text-1 and .header__text-2 due to hover on .header__triangle-1 and .header__triangle-2 ends */
-
-/* change styles for .header__btn-dilers and .header__btn-partners starts */
-const dilers_btn = document.querySelector(".header__btn-dilers"),
-  partners_btn = document.querySelector(".header__btn-partners");
-let dilers_text = document.querySelector(".header__text-btn-dilers"),
-  partners_text = document.querySelector(".header__text-btn-partners");
-dilers_btn.onmouseover = function () {
-  dilers_btn.style.background = "#384255";
-  dilers_text.style.color = "#ffffff"; /* "#858fa4" */
-  partners_btn.style.background = "transparent";
-  partners_text.style.color = "#858fa4";
-};
-dilers_btn.onmouseout = function () {
-  dilers_btn.style.background = "transparent";
-  dilers_text.style.color = "#858fa4";
-  partners_btn.style.background = "#384255";
-  partners_text.style.color = "#ffffff";
-};
-partners_btn.onmouseover = function () {
-  partners_btn.style.background = "#384255";
-  partners_text.style.color = "#ffffff";
-};
-/* change styles for .header__btn-dilers and .header__btn-partners ends */
-
-/* change styles for .footer__btn-dilers and .footer__btn-partners starts */
-const footer__dilers_btn = document.querySelector(".footer__btn-dilers"),
-  footer__partners_btn = document.querySelector(".footer__btn-partners");
-let footer__dilers_text = document.querySelector(".footer__text-btn-dilers"),
-  footer__partners_text = document.querySelector(".footer__text-btn-partners");
-footer__dilers_btn.onmouseover = function () {
-  footer__dilers_btn.style.background = "#384255";
-  footer__dilers_btn.style.border = "none";
-  footer__dilers_text.style.color = "#ffffff";
-  footer__partners_btn.style.background = "transparent";
-  footer__partners_btn.style.border = "1px solid rgba(144, 156, 181, 0.5)";
-  footer__partners_text.style.color = "#858fa4";
-};
-footer__dilers_btn.onmouseout = function () {
-  footer__dilers_btn.style.background = "transparent";
-  footer__dilers_btn.style.border = "1px solid rgba(144, 156, 181, 0.5)";
-  footer__dilers_text.style.color = "#858fa4";
-  footer__partners_btn.style.background = "#384255";
-  footer__partners_btn.style.border = "none";
-  footer__partners_text.style.color = "#ffffff";
-};
-footer__partners_btn.onmouseover = function () {
-  footer__partners_btn.style.background = "transparent";
-  footer__partners_btn.style.border = "1px solid rgba(144, 156, 181, 0.5)";
-  footer__partners_text.style.color = "#858fa4";
-  footer__dilers_btn.style.background = "#384255";
-  footer__dilers_btn.style.border = "none";
-  footer__dilers_text.style.color = "#ffffff";
-};
-footer__partners_btn.onmouseout = function () {
-  footer__partners_btn.style.background = "#384255";
-  footer__partners_btn.style.border = "none";
-  footer__partners_text.style.color = "#ffffff";
-  footer__dilers_btn.style.background = "transparent";
-  footer__dilers_btn.style.border = "1px solid rgba(144, 156, 181, 0.5)";
-  footer__dilers_text.style.color = "#858fa4";
-};
-/* change styles for .footer__btn-dilers and .footer__btn-partners ends */
-
 /* open and close .burger-menu and .for-clubs-menu .choose-city-menu .order-a-call__menu .support-from-expert-menu .login-menu stars .password-recovery-menu */
 $(function () {
   $(".header__burger-btn").click(function () {
@@ -142,7 +45,7 @@ $(function () {
 });
 $(function () {
   $(
-    ".burger-menu__city-text, .burger-menu__city-triangle, .header__city, .header__city-triangle"
+    ".burger-menu__city-text, .burger-menu__city-triangle, .header__city-flex"
   ).click(function () {
     $(".choose-city-menu, .choose-city-menu__shadow").fadeIn(0);
   });
@@ -194,7 +97,7 @@ $(function () {
 });
 $(function () {
   $(
-    ".burger-menu__personal-account-text, .burger-menu__personal-account-img, .header__text-personal-account, .header__img-personal-account"
+    ".burger-menu__personal-account-text, .burger-menu__personal-account-img, .headear__personal-account-submain-flex"
   ).click(function () {
     $(".login-menu, .login-menu__shadow").fadeIn(120);
   });
@@ -247,17 +150,17 @@ $(function () {
 
 /* change styles .login-menu__btn-customer .login-menu__btn-authorized-dealer starts */
 let login_menu_btn_customer = document.querySelector(
-  ".login-menu__btn-customer"
-);
-let login_menu_text_customer = document.querySelector(
-  ".login-menu__text-customer"
-);
-let login_menu_btn_authorized_dealer = document.querySelector(
-  ".login-menu__btn-authorized-dealer"
-);
-let login_menu_text_authorized_dealer = document.querySelector(
-  ".login-menu__text-authorized-dealer"
-);
+    ".login-menu__btn-customer"
+  ),
+  login_menu_text_customer = document.querySelector(
+    ".login-menu__text-customer"
+  ),
+  login_menu_btn_authorized_dealer = document.querySelector(
+    ".login-menu__btn-authorized-dealer"
+  ),
+  login_menu_text_authorized_dealer = document.querySelector(
+    ".login-menu__text-authorized-dealer"
+  );
 login_menu_btn_customer.onmouseover = function () {
   login_menu_btn_customer.style.background = "transparent";
   login_menu_btn_customer.style.border = "1px solid rgba(144, 156, 181, 0.7)";

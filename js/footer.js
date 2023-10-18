@@ -1,16 +1,24 @@
 /* show .footer__text-success due to click on .footer__btn-telegram starts */
-const btn_telegram = document.querySelector(".footer__btn-telegram");
-let text = document.querySelector(".footer__text-success");
+const btn_telegram = document.querySelector(".footer-container__btn-telegram");
+let text = document.querySelector(".footer-container__text-success");
 btn_telegram.onclick = function () {
   text.style.display = "block";
 };
 /* show .footer__text-success due to click on .footer__btn-telegram ends */
 
 /* change styles for .footer__btn-dilers and .footer__btn-partners starts */
-const footer__dilers_btn = document.querySelector(".footer__btn-dilers"),
-  footer__partners_btn = document.querySelector(".footer__btn-partners");
-let footer__dilers_text = document.querySelector(".footer__text-btn-dilers"),
-  footer__partners_text = document.querySelector(".footer__text-btn-partners");
+const footer__dilers_btn = document.querySelector(
+    ".footer-container__btn-dilers"
+  ),
+  footer__partners_btn = document.querySelector(
+    ".footer-container__btn-partners"
+  );
+let footer__dilers_text = document.querySelector(
+    ".footer-container__text-btn-dilers"
+  ),
+  footer__partners_text = document.querySelector(
+    ".footer-container__text-btn-partners"
+  );
 footer__dilers_btn.onmouseover = function () {
   footer__dilers_btn.style.background = "#384255";
   footer__dilers_btn.style.border = "none";
