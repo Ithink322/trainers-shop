@@ -10,7 +10,7 @@
     <h1 class="container-rect-brand__title">{{ $route.params.title }}</h1>
     <div class="container-rect-brand__border"></div>
     <a
-      @click="$router.push('/')"
+      @click="goToMainPage"
       class="container-rect-brand__btn-back-to-previous-page"
       >Назад</a
     >
@@ -94,6 +94,15 @@ import Ideas from "../UI/Ideas.vue";
 export default {
   name: "BrandsPages",
   components: { Ideas },
+  methods: {
+    goToMainPage() {
+      this.$router.push("/");
+      setTimeout(() => {
+        const containerBrands = document.querySelector(".container-brands");
+        containerBrands.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    },
+  },
 };
 </script>
 

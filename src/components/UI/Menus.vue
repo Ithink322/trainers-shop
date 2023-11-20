@@ -710,52 +710,6 @@ export default {
       }
     });
     /* check that user enter his email in .password-recovery-menu__input-email ends */
-    const BurgerMenu = document.querySelector(".burger-menu");
-    window.addEventListener("click", (e) => {
-      /* if (e.target.closest(".burger-menu__text-main")) {
-        this.$router.push("/");
-        window.scrollTo(0, 0);
-        BurgerMenu.style.display = "none";
-      } */
-      /* if (e.target.closest(".text-brands-burger-clicked")) {
-        this.$router.push("/");
-        BurgerMenu.style.display = "none";
-        setTimeout(() => {
-          const containerBrands = document.querySelector(".container-brands");
-          containerBrands.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      } */
-      /* if (e.target.closest(".burger-menu__text-service")) {
-        this.$router.push("/ServicePage");
-        window.scrollTo(0, 0);
-        BurgerMenu.style.display = "none";
-      } */
-      /* if (e.target.closest(".burger-menu__text-services")) {
-        this.$router.push("/ServicesPage");
-        window.scrollTo(0, 0);
-        BurgerMenu.style.display = "none";
-      } */
-      /* if (e.target.closest(".burger-menu__text-about-company")) {
-        this.$router.push("/AboutCompanyPage");
-        window.scrollTo(0, 0);
-        BurgerMenu.style.display = "none";
-      } */
-      /* if (e.target.closest(".burger-menu__text-blog")) {
-        this.$router.push("/BlogPage");
-        window.scrollTo(0, 0);
-        BurgerMenu.style.display = "none";
-      } */
-      /* if (e.target.closest(".burger-menu__text-where-to-buy")) {
-        this.$router.push("/WhereToBuyPage");
-        window.scrollTo(0, 0);
-        BurgerMenu.style.display = "none";
-      } */
-      /* if (e.target.closest(".burger-menu__text-contacts")) {
-        this.$router.push("/ContactsPage");
-        window.scrollTo(0, 0);
-        BurgerMenu.style.display = "none";
-      } */
-    });
   },
   methods: {
     goToMainPage() {

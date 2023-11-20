@@ -10,7 +10,11 @@
             <a>Для фитнес клубов</a>
             <a>Акции</a>
             <a>Новинки</a>
-            <a class="footer-container__text-brands-clicked">Наши бренды</a>
+            <a
+              @click="goToBrandsOnMainPage"
+              class="footer-container__text-brands-clicked"
+              >Наши бренды</a
+            >
           </div>
         </div>
         <div class="footer-container__links-flex">
@@ -176,15 +180,6 @@
 export default {
   name: "my-footer",
   mounted() {
-    window.addEventListener("click", (e) => {
-      if (e.target.closest(".footer-container__text-brands-clicked")) {
-        this.$router.push("/");
-        setTimeout(() => {
-          const containerBrands = document.querySelector(".container-brands");
-          containerBrands.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
-    });
     /* show .footer__text-success due to click on .footer__btn-telegram starts */
     const btn_telegram = document.querySelector(
       ".footer-container__btn-telegram"
@@ -243,6 +238,13 @@ export default {
     /* change styles for .footer__btn-dilers and .footer__btn-partners ends */
   },
   methods: {
+    goToBrandsOnMainPage() {
+      this.$router.push("/");
+      setTimeout(() => {
+        const containerBrands = document.querySelector(".container-brands");
+        containerBrands.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    },
     goToMainPage() {
       this.$router.push("/");
       window.scrollTo(0, 0);
@@ -298,6 +300,9 @@ $blue: #4b7ee8;
   position: relative;
   padding: 1.75rem 0.75rem 1.5rem 0.75rem;
   background: $dark-col;
+}
+.footer-container a {
+  cursor: pointer;
 }
 .footer-container__links-main-flex {
   display: flex;

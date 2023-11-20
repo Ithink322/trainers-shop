@@ -11,105 +11,105 @@
         <p class="container-brands__subtitle">Игровые столы</p>
       </div>
       <div class="container-brands__grid">
-        <div class="container-brands__rect-brand-1">
+        <div @click="goToBrand1Page" class="container-brands__rect-brand-1">
           <img
             src="imgs_main_page/brand_img_1.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-2">
+        <div @click="goToBrand2Page" class="container-brands__rect-brand-2">
           <img
             src="imgs_main_page/brand_img_2.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-3">
+        <div @click="goToBrand3Page" class="container-brands__rect-brand-3">
           <img
             src="imgs_main_page/brand_img_3.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-4">
+        <div @click="goToBrand4Page" class="container-brands__rect-brand-4">
           <img
             src="imgs_main_page/brand_img_4.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-5">
+        <div @click="goToBrand5Page" class="container-brands__rect-brand-5">
           <img
             src="imgs_main_page/brand_img_5.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-6">
+        <div @click="goToBrand6Page" class="container-brands__rect-brand-6">
           <img
             src="imgs_main_page/brand_img_6.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-7">
+        <div @click="goToBrand7Page" class="container-brands__rect-brand-7">
           <img
             src="imgs_main_page/brand_img_7.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-8">
+        <div @click="goToBrand8Page" class="container-brands__rect-brand-8">
           <img
             src="imgs_main_page/brand_img_8.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-9">
+        <div @click="goToBrand9Page" class="container-brands__rect-brand-9">
           <img
             src="imgs_main_page/brand_img_9.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-10">
+        <div @click="goToBrand10Page" class="container-brands__rect-brand-10">
           <img
             src="imgs_main_page/brand_img_10.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-11">
+        <div @click="goToBrand11Page" class="container-brands__rect-brand-11">
           <img
             src="imgs_main_page/brand_img_11.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-12">
+        <div @click="goToBrand12Page" class="container-brands__rect-brand-12">
           <img
             src="imgs_main_page/brand_img_12.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-13">
+        <div @click="goToBrand13Page" class="container-brands__rect-brand-13">
           <img
             src="imgs_main_page/brand_img_13.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-14">
+        <div @click="goToBrand14Page" class="container-brands__rect-brand-14">
           <img
             src="imgs_main_page/brand_img_14.png"
             alt=""
             class="container-brands__img-brand"
           />
         </div>
-        <div class="container-brands__rect-brand-15">
+        <div @click="goToBrand15Page" class="container-brands__rect-brand-15">
           <img
             src="imgs_main_page/brand_img_15.png"
             alt=""
@@ -127,15 +127,161 @@ import BrandPage from "../../pages/BrandPage.vue";
 export default {
   name: "Brands",
   components: { BrandPage },
-  /* data() {
-    return {
-      title: "",
-      imgSource: "",
-    };
-  }, */
+  methods: {
+    goToBrand1Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Bowflex",
+          imgSource: "brand_img_1.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand2Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Boxingbar",
+          imgSource: "brand_img_2.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand3Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Double Fish",
+          imgSource: "brand_img_3.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand4Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Cardio Power",
+          imgSource: "brand_img_4.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand5Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Eclipse",
+          imgSource: "brand_img_5.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand6Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "gym80",
+          imgSource: "brand_img_6.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand7Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Hyfit",
+          imgSource: "brand_img_7.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand8Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "kernel",
+          imgSource: "brand_img_8.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand9Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Meridien",
+          imgSource: "brand_img_9.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand10Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Nautilus",
+          imgSource: "brand_img_10.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand11Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Octane",
+          imgSource: "brand_img_11.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand12Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Optima",
+          imgSource: "brand_img_12.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand13Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Original",
+          imgSource: "brand_img_13.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand14Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "PRO SKI-SIMULATOR",
+          imgSource: "brand_img_14.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+    goToBrand15Page() {
+      this.$router.push({
+        name: "BrandPage", // Имя маршрута BrandPage
+        params: {
+          title: "Cardio Power Pro",
+          imgSource: "brand_img_15.png",
+        },
+      });
+      window.scrollTo(0, 0); // Перемещение в начало страницы
+    },
+  },
   mounted() {
     window.addEventListener("click", (event) => {
-      if (event.target.closest(".container-brands__rect-brand-1")) {
+      /* if (event.target.closest(".container-brands__rect-brand-1")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -144,8 +290,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-2")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-2")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -154,8 +300,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-3")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-3")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -164,8 +310,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-4")) {
+      } */
+      /*  if (event.target.closest(".container-brands__rect-brand-4")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -174,8 +320,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-5")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-5")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -184,8 +330,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-6")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-6")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -194,8 +340,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-7")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-7")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -204,8 +350,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-8")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-8")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -214,8 +360,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-9")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-9")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -224,8 +370,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-10")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-10")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -234,8 +380,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-11")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-11")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -244,8 +390,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-12")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-12")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -254,8 +400,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-13")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-13")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -264,8 +410,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-14")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-14")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -274,8 +420,8 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
-      if (event.target.closest(".container-brands__rect-brand-15")) {
+      } */
+      /* if (event.target.closest(".container-brands__rect-brand-15")) {
         this.$router.push({
           name: "BrandPage", // Имя маршрута BrandPage
           params: {
@@ -284,7 +430,7 @@ export default {
           },
         });
         window.scrollTo(0, 0); // Перемещение в начало страницы
-      }
+      } */
     });
   },
 };

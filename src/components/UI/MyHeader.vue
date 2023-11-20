@@ -134,10 +134,15 @@
           </div>
           <div class="header__titles-and-icons-flex-absolute">
             <div class="header__titles-submain-flex">
-              <button @click="$router.push('/')" class="header__title">
+              <button @click="goToMainPage" class="header__title">
                 Главная
               </button>
-              <button class="header__title header__brands-title">Бренды</button>
+              <button
+                @click="goToBrandsOnMainPage"
+                class="header__title header__brands-title"
+              >
+                Бренды
+              </button>
               <button class="header__title">Сервис</button>
               <button class="header__title">Услуги</button>
               <button class="header__title header__support-title">
@@ -225,15 +230,6 @@
 export default {
   name: "my-header",
   mounted() {
-    window.addEventListener("click", (e) => {
-      if (e.target.closest(".header__brands-title")) {
-        this.$router.push("/");
-        setTimeout(() => {
-          const containerBrands = document.querySelector(".container-brands");
-          containerBrands.scrollIntoView({ behavior: "smooth" });
-        }, 100);
-      }
-    });
     /* show and hide border-bottom .header__text-1 and .header__text-2 due to hover on .header__triangle-1 and .header__triangle-2 starts */
     let text_1 = document.querySelector(".header__text-1"),
       text_2 = document.querySelector(".header__text-2"),
@@ -281,6 +277,19 @@ export default {
       partners_text.style.color = "#ffffff";
     };
     /* change styles for .header__btn-dilers and .header__btn-partners ends */
+  },
+  methods: {
+    goToBrandsOnMainPage() {
+      this.$router.push("/");
+      setTimeout(() => {
+        const containerBrands = document.querySelector(".container-brands");
+        containerBrands.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    },
+    goToMainPage() {
+      this.$router.push("/");
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
