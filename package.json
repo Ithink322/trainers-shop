@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "dev": "webpack-dev-server --hot --inline",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "devDependencies": {
+    "@types/vue-router": "^2.0.0",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.3.8",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "vue-template-compiler": "^2.7.15",
+    "webpack": "^5.89.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.1",
+    "jquery": "^3.7.1",
+    "volar-service-vetur": "^0.0.17",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  }
+}

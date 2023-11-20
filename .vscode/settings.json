@@ -1,0 +1,7 @@
+{
+  "liveServer.settings.port": 5501,
+  "vetur.experimental.templateInterpolationService": true,
+  "files.associations": {
+    "*.vue": "vue"
+  }
+}
