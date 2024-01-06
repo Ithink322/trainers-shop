@@ -9,7 +9,11 @@ import ProjectPage from "../components/pages/ProjectPage.vue";
 import BlogPage from "../components/pages/BlogPage.vue";
 import ContactsPage from "../components/pages/ContactsPage.vue";
 import PrivacyPolicyPage from "../components/pages/PrivacyPolicyPage.vue";
-/* import App from "../App.vue"; */
+import CatalogPage from "../components/pages/CatalogPage.vue";
+import CurrentItem from "../components/pages/CurrentItem.vue";
+import Cart from "../components/pages/Cart.vue";
+import FavoritesPage from "../components/pages/FavoritesPage.vue";
+import ComparisonPage from "../components/pages/ComparisonPage.vue";
 
 const routes = [
   {
@@ -53,6 +57,26 @@ const routes = [
   {
     path: "/PrivacyPolicyPage",
     component: PrivacyPolicyPage,
+  },
+  {
+    path: "/CatalogPage",
+    component: CatalogPage,
+  },
+  {
+    path: "/CurrentItem",
+    component: CurrentItem,
+  },
+  {
+    path: "/Cart",
+    component: Cart,
+  },
+  {
+    path: "/FavoritesPage",
+    component: FavoritesPage,
+  },
+  {
+    path: "/ComparisonPage",
+    component: ComparisonPage,
   },
 ];
 

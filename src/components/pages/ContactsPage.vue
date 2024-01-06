@@ -431,41 +431,20 @@ export default {
         ".container-contacts__info-rect-carousel-img"
       );
     let currentPosition = 0;
-    if (window.innerWidth < 1024) {
-      prevBtn.addEventListener("click", () => {
-        currentPosition += 100;
-        /* console.log("prev currentPosition:", currentPosition); */
-        if (currentPosition > 0) {
-          currentPosition = -100 * (carouselItems.length - 5);
-        }
-        carouselContainer.style.transform = `translateX(${currentPosition}%)`;
-      });
-      nextBtn.addEventListener("click", () => {
-        currentPosition -= 100;
-        /* console.log("next currentPosition:", currentPosition); */
-        if (currentPosition < -100 * (carouselItems.length - 5)) {
-          currentPosition = 0;
-        }
-        carouselContainer.style.transform = `translateX(${currentPosition}%)`;
-      });
-    } else {
-      prevBtn.addEventListener("click", () => {
-        currentPosition += 100;
-        /* console.log("prev currentPosition:", currentPosition); */
-        if (currentPosition > 0) {
-          currentPosition = -100 * (carouselItems.length - 5); // I have four more images from 1024px
-        }
-        carouselContainer.style.transform = `translateX(${currentPosition}%)`;
-      });
-      nextBtn.addEventListener("click", () => {
-        currentPosition -= 100;
-        /* console.log("next currentPosition:", currentPosition); */
-        if (currentPosition < -100 * (carouselItems.length - 5)) {
-          currentPosition = 0;
-        }
-        carouselContainer.style.transform = `translateX(${currentPosition}%)`;
-      });
-    }
+    prevBtn.addEventListener("click", () => {
+      currentPosition += 100;
+      if (currentPosition > 0) {
+        currentPosition = -100 * (carouselItems.length - 5);
+      }
+      carouselContainer.style.transform = `translateX(${currentPosition}%)`;
+    });
+    nextBtn.addEventListener("click", () => {
+      currentPosition -= 100;
+      if (currentPosition < -100 * (carouselItems.length - 5)) {
+        currentPosition = 0;
+      }
+      carouselContainer.style.transform = `translateX(${currentPosition}%)`;
+    });
     /* carousel .container-contacts__info-rect-carousel ends */
 
     /* rendering some data if user clicked on one of the btns .container-contacts__contacts-in-moscow-btn .container-contacts__contacts-in-Novokuznetsk-btn starts */
@@ -1204,6 +1183,9 @@ $blue: #4b7ee8;
 @media (min-width: 120em) {
   .container-contacts {
     padding: 3.75rem 15.938rem 7.5rem 15.938rem;
+  }
+  .container-contacts__title {
+    font-size: 2.375rem;
   }
   .container-contacts__info-rect-information {
     padding: 2.5rem 72% 2.5rem 2.5rem;

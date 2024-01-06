@@ -61,40 +61,66 @@
           <div class="header__border-1"></div>
           <div class="header__flex-icons">
             <img
+              @click="goToComparisonPage"
               src="/imgs_main_page/comparison-icon.svg"
               alt=""
               class="header__comparison-icon"
             />
-            <img
-              src="/imgs_main_page/header__amount-circle.svg"
-              alt=""
-              class="header__comparison-amount-circle"
-            />
-            <p class="header__text-comparison-amount-circle">1</p>
+            <div class="header__comparison-amount-circle-and-text-div">
+              <div class="header__comparison-amount-circle-and-text-flex">
+                <img
+                  src="/imgs_main_page/amoun-circle-from768px.svg"
+                  alt=""
+                  class="header__comparison-amount-circle-from768px"
+                />
+                <span class="header__text-comparison-amount-circle">1</span>
+              </div>
+            </div>
             <img
               src="/imgs_main_page/heart-icon.svg"
               alt=""
               class="header__heart-icon"
+              @click="goToFavouritesPage"
             />
+            <div class="header__heart-amount-circle-and-text-div">
+              <div class="header__heart-amount-circle-and-text-flex">
+                <img
+                  src="/imgs_main_page/header__amount-circle.svg"
+                  alt=""
+                  class="header__heart-amount-circle"
+                />
+                <img
+                  src="/imgs_main_page/amoun-circle-from768px.svg"
+                  alt=""
+                  class="header__heart-amount-circle-from768px"
+                />
+                <span class="header__text-heart-amount-circle"></span>
+              </div>
+            </div>
             <img
-              src="/imgs_main_page/header__amount-circle.svg"
-              alt=""
-              class="header__heart-amount-circle"
-            />
-            <p class="header__text-heart-amount-circle">1</p>
-            <img
+              @click="goToCart"
               src="/imgs_main_page/header__cart-icon-from768px.svg"
               alt=""
               class="header__cart-icon-from768px"
             />
-            <img
-              src="/imgs_main_page/header__amount-circle.svg"
-              alt=""
-              class="header__cart-amount-circle"
-            />
-            <p class="header__text-cart-amount-circle">1</p>
+            <div class="header__cart-amount-circle-and-text-div">
+              <div class="header__cart-amount-circle-and-text-flex">
+                <img
+                  src="/imgs_main_page/header__amount-circle.svg"
+                  alt=""
+                  class="header__cart-amount-circle"
+                />
+                <img
+                  src="/imgs_main_page/amoun-circle-from768px.svg"
+                  alt=""
+                  class="header__cart-amount-circle-from768px"
+                />
+                <span class="header__text-cart-amount-circle"></span>
+              </div>
+            </div>
           </div>
           <img
+            @click="goToCart"
             src="/imgs_main_page/header__cart-icon-from320px.svg"
             alt=""
             class="header__cart-icon-from320px"
@@ -121,16 +147,6 @@
               class="header__search-icon-from1440px"
             />
             <div class="header__border-1-from1440px"></div>
-            <img
-              src="/imgs_main_page/header__cart-icon-from320px.svg"
-              alt=""
-              class="header__cart-icon-from320px"
-            />
-            <img
-              src="/imgs_main_page/header__burger-btn.svg"
-              alt=""
-              class="header__burger-btn"
-            />
           </div>
           <div class="header__titles-and-icons-flex-absolute">
             <div class="header__titles-submain-flex">
@@ -143,8 +159,9 @@
               >
                 Бренды
               </button>
-              <button class="header__title">Сервис</button>
-              <button class="header__title">Услуги</button>
+              <button @click="goToCatalogPage" class="header__title">
+                Каталог
+              </button>
               <button class="header__title header__support-title">
                 Поддержка
               </button>
@@ -172,38 +189,67 @@
             </div>
             <div class="header__icons-from1440px-submain-flex">
               <img
+                @click="goToComparisonPage"
                 src="/imgs_main_page/comparison-icon.svg"
                 alt=""
                 class="header__comparison-icon-from1440px"
               />
-              <img
-                src="/imgs_main_page/header__amount-circle.svg"
-                alt=""
-                class="header__comparison-amount-circle-from1440px"
-              />
-              <p class="header__text-comparison-amount-circle-from1440px">1</p>
+              <div
+                class="header__comparison-amount-circle-and-text-div-from1440px"
+              >
+                <div
+                  class="header__comparison-amount-circle-and-text-flex-from1440px"
+                >
+                  <img
+                    src="/imgs_main_page/amoun-circle-from768px.svg"
+                    alt=""
+                    class="header__comparison-amount-circle-from1440px"
+                  />
+                  <span class="header__text-comparison-amount-circle-from1440px"
+                    >1</span
+                  >
+                </div>
+              </div>
               <img
                 src="/imgs_main_page/heart-icon.svg"
                 alt=""
                 class="header__heart-icon-from1440px"
+                @click="goToFavouritesPage"
               />
+              <div class="header__heart-amount-circle-and-text-div-from1440px">
+                <div
+                  class="header__heart-amount-circle-and-text-flex-from1440px"
+                >
+                  <img
+                    src="/imgs_main_page/amoun-circle-from768px.svg"
+                    alt=""
+                    class="header__heart-amount-circle-from1440px"
+                  />
+                  <span class="header__text-heart-amount-circle-from1440px"
+                    >1</span
+                  >
+                </div>
+              </div>
               <img
-                src="/imgs_main_page/header__amount-circle.svg"
-                alt=""
-                class="header__heart-amount-circle-from1440px"
-              />
-              <p class="header__text-heart-amount-circle-from1440px">1</p>
-              <img
+                @click="goToCart"
                 src="/imgs_main_page/header__cart-icon-from768px.svg"
                 alt=""
                 class="header__cart-icon-from1440px"
               />
-              <img
-                src="/imgs_main_page/header__amount-circle.svg"
-                alt=""
-                class="header__cart-amount-circle-from1440px"
-              />
-              <p class="header__text-cart-amount-circle-from1440px">1</p>
+              <div class="header__cart-amount-circle-and-text-div-from1440px">
+                <div
+                  class="header__cart-amount-circle-and-text-flex-from1440px"
+                >
+                  <img
+                    src="/imgs_main_page/amoun-circle-from768px.svg"
+                    alt=""
+                    class="header__cart-amount-circle-from1440px"
+                  />
+                  <span class="header__text-cart-amount-circle-from1440px"
+                    >1</span
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -221,7 +267,29 @@
             <div class="header__triangle-2"></div>
           </div>
         </div>
+        <img
+          src="/imgs_main_page/heart-icon.svg"
+          alt=""
+          class="header__favourites-icon-from320px"
+          @click="goToFavouritesPage"
+        />
+        <div class="header__heart-amount-circle-and-text-div-from320px">
+          <div class="header__heart-amount-circle-and-text-flex-from320px">
+            <img
+              src="/imgs_main_page/header__amount-circle.svg"
+              alt=""
+              class="header__heart-amount-circle-from320px"
+            />
+            <span class="header__text-heart-amount-circle-from320px"></span>
+          </div>
+        </div>
       </div>
+      <ul class="header__dropdown-menu-for-home">
+        <li @click="goToCatalogPage">Кардиотренажеры</li>
+      </ul>
+      <ul class="header__dropdown-menu-for-fitnes-club">
+        <li @click="goToCatalogPage">Кардиотренажеры</li>
+      </ul>
     </header>
   </body>
 </template>
@@ -229,12 +297,163 @@
 <script>
 export default {
   name: "my-header",
+  methods: {
+    goToBrandsOnMainPage() {
+      this.$router.push("/");
+      setTimeout(() => {
+        const containerBrands = document.querySelector(".container-brands");
+        containerBrands.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    },
+    goToMainPage() {
+      this.$router.push("/");
+      window.scrollTo(0, 0);
+    },
+    goToCatalogPage() {
+      this.$router.push("/CatalogPage");
+      window.scrollTo(0, 0);
+      document
+        .querySelector(".header__dropdown-menu-for-home")
+        .classList.remove("header__show-for-dropdown-menus");
+      document
+        .querySelector(".header__dropdown-menu-for-fitnes-club")
+        .classList.remove("header__show-for-dropdown-menus");
+    },
+    goToCart() {
+      this.$router.push("/Cart");
+      window.scrollTo(0, 0);
+    },
+    goToFavouritesPage() {
+      this.$router.push("/FavoritesPage");
+      window.scrollTo(0, 0);
+    },
+    goToComparisonPage() {
+      this.$router.push("/ComparisonPage");
+      window.scrollTo(0, 0);
+    },
+    updateTotalQty() {
+      let totalQty = 0;
+      let products = JSON.parse(localStorage.getItem("cart"));
+      if (products !== null) {
+        products.forEach((product) => {
+          totalQty += Number(product.qty);
+        });
+        localStorage.setItem("totalQtyOfProducts", totalQty.toString());
+      }
+      let divAmountOfProducts = document.querySelector(
+          ".header__cart-amount-circle-and-text-div"
+        ),
+        textAmountOfProducts = document.querySelector(
+          ".header__text-cart-amount-circle"
+        ),
+        divAmountOfProductsFrom1440px = document.querySelector(
+          ".header__cart-amount-circle-and-text-div-from1440px"
+        ),
+        textAmountOfProductsFrom1440px = document.querySelector(
+          ".header__text-cart-amount-circle-from1440px"
+        );
+      if (totalQty > 0) {
+        if (window.innerWidth < 1440) {
+          divAmountOfProducts.style.display = "block";
+        }
+        if (window.innerWidth >= 1440) {
+          divAmountOfProductsFrom1440px.style.display = "block";
+        }
+        textAmountOfProducts.textContent = totalQty.toString();
+        textAmountOfProductsFrom1440px.textContent = totalQty.toString();
+      } else {
+        divAmountOfProducts.style.display = "none";
+        divAmountOfProductsFrom1440px.style.display = "none";
+      }
+    },
+    updateTotalOfFavorites() {
+      let totalQty = JSON.parse(localStorage.getItem("favorites"));
+      if (totalQty) {
+        totalQty = totalQty.length;
+      }
+
+      let divAmountOfFavoritesFrom320px = document.querySelector(
+          ".header__heart-amount-circle-and-text-div-from320px"
+        ),
+        textAmountOfFavoritesFrom320px = document.querySelector(
+          ".header__text-heart-amount-circle-from320px"
+        ),
+        divAmountOfFavoritesFrom768px = document.querySelector(
+          ".header__heart-amount-circle-and-text-div"
+        ),
+        textAmountOfFavoritesFrom768px = document.querySelector(
+          ".header__text-heart-amount-circle"
+        ),
+        divAmountOfFavoritesFrom1440px = document.querySelector(
+          ".header__heart-amount-circle-and-text-div-from1440px"
+        ),
+        textAmountOfFavoritesFrom1440px = document.querySelector(
+          ".header__text-heart-amount-circle-from1440px"
+        );
+      if (totalQty > 0) {
+        if (window.innerWidth < 768) {
+          divAmountOfFavoritesFrom320px.style.display = "block";
+        }
+        if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+          divAmountOfFavoritesFrom768px.style.display = "block";
+        }
+        if (window.innerWidth >= 1440) {
+          divAmountOfFavoritesFrom1440px.style.display = "block";
+        }
+        textAmountOfFavoritesFrom320px.textContent = totalQty.toString();
+        textAmountOfFavoritesFrom768px.textContent = totalQty.toString();
+        textAmountOfFavoritesFrom1440px.textContent = totalQty.toString();
+      } else {
+        divAmountOfFavoritesFrom320px.style.display = "none";
+        divAmountOfFavoritesFrom768px.style.display = "none";
+        divAmountOfFavoritesFrom1440px.style.display = "none";
+      }
+    },
+    updateTotalOfComparisons() {
+      let totalQty = JSON.parse(localStorage.getItem("comparisons"));
+      if (totalQty) {
+        totalQty = totalQty.length;
+      }
+
+      let divAmountOfComparisonsFrom768px = document.querySelector(
+          ".header__comparison-amount-circle-and-text-div"
+        ),
+        textAmountOfComparisonsFrom768px = document.querySelector(
+          ".header__text-comparison-amount-circle"
+        ),
+        divAmountOfComparisonsFrom1440px = document.querySelector(
+          ".header__comparison-amount-circle-and-text-div-from1440px"
+        ),
+        textAmountOfComparisonsFrom1440px = document.querySelector(
+          ".header__text-comparison-amount-circle-from1440px"
+        );
+      if (totalQty > 0) {
+        if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+          divAmountOfComparisonsFrom768px.style.display = "block";
+          textAmountOfComparisonsFrom768px.textContent = totalQty.toString();
+        }
+        if (window.innerWidth >= 1440) {
+          divAmountOfComparisonsFrom1440px.style.display = "block";
+          textAmountOfComparisonsFrom1440px.textContent = totalQty.toString();
+        }
+      } else {
+        divAmountOfComparisonsFrom768px.style.display = "none";
+        divAmountOfComparisonsFrom1440px.style.display = "none";
+      }
+    },
+  },
   mounted() {
     /* show and hide border-bottom .header__text-1 and .header__text-2 due to hover on .header__triangle-1 and .header__triangle-2 starts */
-    let text_1 = document.querySelector(".header__text-1"),
+    const text_1 = document.querySelector(".header__text-1"),
       text_2 = document.querySelector(".header__text-2"),
       flex_1 = document.querySelector(".header__back-submain-flex-1"),
-      flex_2 = document.querySelector(".header__back-submain-flex-2");
+      flex_2 = document.querySelector(".header__back-submain-flex-2"),
+      dropdownMenuHome = document.querySelector(
+        ".header__dropdown-menu-for-home"
+      ),
+      dropdownMenuClub = document.querySelector(
+        ".header__dropdown-menu-for-fitnes-club"
+      );
     flex_1.onmouseover = function () {
       text_1.style.borderBottom = "3px solid #f53b49";
     };
@@ -248,10 +467,10 @@ export default {
       text_2.style.borderBottom = "3px solid #2a2c38";
     };
     flex_1.onclick = function () {
-      text_1.style.borderBottom = "3px solid #f53b49";
+      dropdownMenuHome.classList.toggle("header__show-for-dropdown-menus");
     };
     flex_2.onclick = function () {
-      text_2.style.borderBottom = "3px solid #f53b49";
+      dropdownMenuClub.classList.toggle("header__show-for-dropdown-menus");
     };
     /* show and hide border-bottom .header__text-1 and .header__text-2 due to hover on .header__triangle-1 and .header__triangle-2 ends */
 
@@ -277,19 +496,9 @@ export default {
       partners_text.style.color = "#ffffff";
     };
     /* change styles for .header__btn-dilers and .header__btn-partners ends */
-  },
-  methods: {
-    goToBrandsOnMainPage() {
-      this.$router.push("/");
-      setTimeout(() => {
-        const containerBrands = document.querySelector(".container-brands");
-        containerBrands.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    },
-    goToMainPage() {
-      this.$router.push("/");
-      window.scrollTo(0, 0);
-    },
+    this.updateTotalQty();
+    this.updateTotalOfFavorites();
+    this.updateTotalOfComparisons();
   },
 };
 </script>
@@ -358,27 +567,45 @@ body {
   border-radius: 1px;
   background: rgba(255, 255, 255, 0.15);
 }
+.header__heart-amount-circle-and-text-div-from320px {
+  position: absolute;
+  display: none;
+  right: 1.7rem;
+  margin-top: -1.95rem;
+}
+.header__heart-amount-circle-and-text-flex-from320px {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header__cart-icon-from320px {
   cursor: pointer;
 }
-.header__cart-amount-circle {
+.header__cart-amount-circle-and-text-div {
   display: none;
+}
+.header__cart-amount-circle-and-text-flex {
   position: absolute;
-  width: 15.5px;
-  height: 15.5px;
-  margin-left: 1.343rem;
-  margin-top: -0.67rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.8rem;
+  margin-top: -0.27rem;
+}
+.header__cart-amount-circle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
 }
+.header__text-heart-amount-circle-from320px,
 .header__text-cart-amount-circle {
-  display: none;
   position: absolute;
   font-family: "Inter", sans-serif;
   font-size: 0.625rem;
   font-weight: 400;
   color: $white-col;
-  margin-top: -0.593rem;
-  margin-left: 1.64rem;
 }
 .header__burger-btn {
   height: 17px;
@@ -424,6 +651,41 @@ body {
   border-top: 5px solid $white-col;
   margin-top: 1.0625rem;
 }
+.header__favourites-icon-from320px {
+  position: absolute;
+  right: 0.25rem;
+  margin-top: -2rem;
+  cursor: pointer;
+}
+.header__dropdown-menu-for-home,
+.header__dropdown-menu-for-fitnes-club {
+  position: absolute;
+  list-style: none;
+  font-size: 0.875rem;
+  padding: 1.1rem 1rem 1.1rem 1rem;
+  width: 100%;
+  margin-top: 0rem;
+  line-height: 1.8rem;
+  color: $white-col;
+  z-index: 2;
+  display: none;
+}
+.header__dropdown-menu-for-home {
+  background: #72226b;
+}
+.header__dropdown-menu-for-fitnes-club {
+  background: #312272;
+}
+.header__dropdown-menu-for-home li,
+.header__dropdown-menu-for-fitnes-club li {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header__show-for-dropdown-menus {
+  display: block;
+}
 .header__city-flex,
 .header__comparison-icon,
 .header__heart-icon,
@@ -450,7 +712,10 @@ body {
 .header__logo-from1440px,
 .header__titles-submain-flex,
 .header__directory-and-search-btns-submain-flex,
-.header__icons-from1440px-submain-flex {
+.header__icons-from1440px-submain-flex,
+.header__comparison-amount-circle-from768px,
+.header__heart-amount-circle-from768px,
+.header__cart-amount-circle-from768px {
   display: none;
 }
 
@@ -462,6 +727,13 @@ body {
   }
   .header__back-flex {
     gap: 1.875rem;
+  }
+  .header__favourites-icon-from320px {
+    display: none;
+  }
+  .header__dropdown-menu-for-home,
+  .header__dropdown-menu-for-fitnes-club {
+    padding: 1.1rem 3rem 1.1rem 3rem;
   }
   .header__logo-and-city-flex {
     position: absolute;
@@ -508,29 +780,47 @@ body {
     display: block;
     cursor: pointer;
   }
-  .header__comparison-amount-circle,
-  .header__heart-amount-circle,
+  .header__heart-amount-circle-and-text-div-from320px {
+    display: none;
+  }
   .header__cart-amount-circle {
     display: none;
+  }
+  .header__comparison-amount-circle-and-text-div {
     position: absolute;
-    width: 18px;
-    height: 18px;
-    margin-top: 0.18rem;
+    display: none;
+    margin-top: 0.635rem;
+    margin-left: 1.5rem;
+  }
+  .header__heart-amount-circle-and-text-div {
+    position: absolute;
+    display: none;
+    margin-top: 0.635rem;
+    margin-left: 5.5rem;
+  }
+  .header__comparison-amount-circle-and-text-flex,
+  .header__heart-amount-circle-and-text-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__cart-amount-circle-and-text-div {
+    position: absolute;
+    display: none;
+    margin-top: 0.875rem;
+    margin-left: 7.3rem;
+  }
+  .header__comparison-amount-circle-from768px,
+  .header__heart-amount-circle-from768px,
+  .header__cart-amount-circle-from768px {
+    display: block;
+    position: absolute;
     cursor: pointer;
-  }
-  .header__comparison-amount-circle {
-    margin-left: 1rem;
-  }
-  .header__heart-amount-circle {
-    margin-left: 4.78rem;
-  }
-  .header__cart-amount-circle {
-    margin-left: 8.48rem;
   }
   .header__text-comparison-amount-circle,
   .header__text-heart-amount-circle,
   .header__text-cart-amount-circle {
-    display: none;
+    display: block;
     position: absolute;
     font-family: "Inter", sans-serif;
     font-size: 0.625rem;
@@ -538,17 +828,10 @@ body {
     color: $white-col;
     top: 0.909rem;
   }
-  .header__text-comparison-amount-circle {
-    margin-left: 1.38rem;
-    margin-top: 0.72rem;
-  }
-  .header__text-heart-amount-circle {
-    margin-left: 5.14rem;
-    margin-top: 0.72rem;
-  }
+  .header__text-comparison-amount-circle,
+  .header__text-heart-amount-circle,
   .header__text-cart-amount-circle {
-    margin-left: 8.88rem;
-    margin-top: 0.72rem;
+    margin-top: -1.3rem;
   }
   .header__search-icon {
     top: 1.6rem;
@@ -830,47 +1113,45 @@ body {
     .header__cart-icon-from1440px {
       cursor: pointer;
     }
+    .header__comparison-amount-circle-and-text-div-from1440px {
+      position: absolute;
+      display: none;
+      margin-left: 1.5rem;
+      margin-top: 0.92rem;
+    }
+    .header__heart-amount-circle-and-text-div-from1440px {
+      position: absolute;
+      display: none;
+      margin-left: 5.4rem;
+      margin-top: 0.92rem;
+    }
+    .header__cart-amount-circle-and-text-div-from1440px {
+      position: absolute;
+      display: none;
+      margin-left: 9rem;
+      margin-top: 0.92rem;
+    }
+    .header__comparison-amount-circle-and-text-flex-from1440px,
+    .header__heart-amount-circle-and-text-flex-from1440px,
+    .header__cart-amount-circle-and-text-flex-from1440px {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .header__comparison-amount-circle-from1440px,
     .header__heart-amount-circle-from1440px,
     .header__cart-amount-circle-from1440px {
-      display: none;
       position: absolute;
-      margin-left: 0.8rem;
-      margin-top: 0.4rem;
       cursor: pointer;
-    }
-    .header__comparison-amount-circle-from1440px {
-      margin-left: 0.8rem;
-      margin-top: 0.4rem;
-    }
-    .header__heart-amount-circle-from1440px {
-      margin-left: 4.72rem;
-      margin-top: 0.4rem;
-    }
-    .header__cart-amount-circle-from1440px {
-      margin-left: 8.448rem;
-      margin-top: 0.4rem;
     }
     .header__text-comparison-amount-circle-from1440px,
     .header__text-heart-amount-circle-from1440px,
     .header__text-cart-amount-circle-from1440px {
-      display: none;
       position: absolute;
       font-family: "Inter", sans-serif;
       font-size: 0.625rem;
       font-weight: 400;
       color: $white-col;
-      margin: 0rem;
-      margin-top: 0.65rem;
-    }
-    .header__text-comparison-amount-circle-from1440px {
-      margin-left: 1.3rem;
-    }
-    .header__text-heart-amount-circle-from1440px {
-      margin-left: 5.25rem;
-    }
-    .header__text-cart-amount-circle-from1440px {
-      margin-left: 8.93rem;
     }
     .header__back--dark-blue {
       padding: 0.6125rem 2.5rem 0.5rem 2.5rem;
@@ -892,6 +1173,10 @@ body {
     .header__back-flex {
       padding-left: 15.938rem;
     }
+    .header__dropdown-menu-for-home,
+    .header__dropdown-menu-for-fitnes-club {
+      padding: 1.1rem 17.2rem 1.1rem 17.2rem;
+    }
     .header__logo-and-city-flex {
       padding-left: 15.938rem;
     }
@@ -905,32 +1190,11 @@ body {
     .header__icons-from1440px-submain-flex {
       gap: 1.875rem;
     }
-    .header__comparison-amount-circle-from1440px,
-    .header__heart-amount-circle-from1440px,
-    .header__cart-amount-circle-from1440px {
-      margin-left: 0.8rem;
-      margin-top: 0.4rem;
+    .header__heart-amount-circle-and-text-div-from1440px {
+      margin-left: 6.2rem;
     }
-    .header__heart-amount-circle-from1440px {
-      margin-left: 5.4rem;
-    }
-    .header__cart-amount-circle-from1440px {
-      margin-left: 9.71rem;
-    }
-    .header__text-comparison-amount-circle-from1440px,
-    .header__text-heart-amount-circle-from1440px,
-    .header__text-cart-amount-circle-from1440px {
-      margin: 0rem;
-      margin-top: 0.65rem;
-    }
-    .header__text-comparison-amount-circle-from1440px {
-      margin-left: 1.3rem;
-    }
-    .header__text-heart-amount-circle-from1440px {
-      margin-left: 5.87rem;
-    }
-    .header__text-cart-amount-circle-from1440px {
-      margin-left: 10.18rem;
+    .header__cart-amount-circle-and-text-div-from1440px {
+      margin-left: 10.28rem;
     }
     .header__back--dark-blue {
       padding: 0.6125rem 15.938rem 0.5rem 15.938rem;

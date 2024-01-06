@@ -47,14 +47,9 @@
           >Бренды</a
         ><br class="burger-menu__br-subtitles" />
         <a
-          @click="goToServicePage"
+          @click="goToCatalogPage"
           class="cursor-pointer burger-menu__subtitles burger-menu__subtitles--margin-top burger-menu__text-service"
-          >Сервис<br class="burger-menu__br-subtitles"
-        /></a>
-        <a
-          @click="goToServicesPage"
-          class="cursor-pointer burger-menu__subtitles burger-menu__text-services"
-          >Услуги<br class="burger-menu__br-subtitles"
+          >Каталог<br class="burger-menu__br-subtitles"
         /></a>
         <a
           class="cursor-pointer burger-menu__subtitles burger-menu__text-support"
@@ -732,6 +727,11 @@ export default {
     },
     goToServicesPage() {
       this.$router.push("/ServicesPage");
+      window.scrollTo(0, 0);
+      document.querySelector(".burger-menu").style.display = "none";
+    },
+    goToCatalogPage() {
+      this.$router.push("/CatalogPage");
       window.scrollTo(0, 0);
       document.querySelector(".burger-menu").style.display = "none";
     },

@@ -16,8 +16,10 @@
   "dependencies": {
     "axios": "^1.6.1",
     "jquery": "^3.7.1",
+    "nouislider": "^15.7.1",
     "volar-service-vetur": "^0.0.17",
     "vue": "^3.3.8",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vuex": "^4.1.0"
   }
 }

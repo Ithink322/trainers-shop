@@ -6,6 +6,7 @@
           <h2 class="footer-container__title-1">Каталог</h2>
           <div class="footer-container__links-subflex">
             <a @click="goToMainPage">Главная</a>
+            <a @click="goToCatalogPage">Каталог</a>
             <a>Для дома</a>
             <a>Для фитнес клубов</a>
             <a>Акции</a>
@@ -247,6 +248,10 @@ export default {
     },
     goToMainPage() {
       this.$router.push("/");
+      window.scrollTo(0, 0);
+    },
+    goToCatalogPage() {
+      this.$router.push("/CatalogPage");
       window.scrollTo(0, 0);
     },
     goToAboutCompanyPage() {
