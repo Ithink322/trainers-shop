@@ -1,3 +1,22 @@
-### Recent changes
+# Trainers shop - online fitness equipment store.
 
-**Vue3** Now the whole project on Vue3. Love it. :heart:
+Stack:
+
+- HTML
+- CSS
+- JS
+- Vue 3
+- Vue Router
+- Vuex
+- Vue CLI
+
+## Project setup
+
+<div style="border: 1px solid rgba(133, 143, 164, 0.2); margin-top: -1.2rem; margin-bottom: 1rem;">
+  <!-- Ваше содержимое README файла -->
+</div>
+
+```
+npm install
+npm run serve
+```
