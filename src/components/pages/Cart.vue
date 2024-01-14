@@ -87,12 +87,11 @@ export default {
         let counters = document.querySelectorAll(
           ".container-cart__guarantee-counter-text"
         );
-        let currentCounters = [];
-        for (let i = 0; i < counters.length; i++) {
-          if (btnIsActivated.includes(i.toString())) {
-            currentCounters.push(parseInt(counters[i].innerText) * 1000);
-          }
-        }
+        let currentCounters =
+          JSON.parse(localStorage.getItem("currentCounters")) || [];
+
+        // Удаление соответствующего элемента из массива currentCounters на основе индекса
+        currentCounters.splice(index, 1);
 
         localStorage.setItem(
           "guaranteeActivated",

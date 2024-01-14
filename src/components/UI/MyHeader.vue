@@ -66,7 +66,10 @@
               alt=""
               class="header__comparison-icon"
             />
-            <div class="header__comparison-amount-circle-and-text-div">
+            <div
+              @click="goToComparisonPage"
+              class="header__comparison-amount-circle-and-text-div"
+            >
               <div class="header__comparison-amount-circle-and-text-flex">
                 <img
                   src="/imgs_main_page/amoun-circle-from768px.svg"
@@ -82,7 +85,10 @@
               class="header__heart-icon"
               @click="goToFavouritesPage"
             />
-            <div class="header__heart-amount-circle-and-text-div">
+            <div
+              @click="goToFavouritesPage"
+              class="header__heart-amount-circle-and-text-div"
+            >
               <div class="header__heart-amount-circle-and-text-flex">
                 <img
                   src="/imgs_main_page/header__amount-circle.svg"
@@ -103,7 +109,10 @@
               alt=""
               class="header__cart-icon-from768px"
             />
-            <div class="header__cart-amount-circle-and-text-div">
+            <div
+              @click="goToCart"
+              class="header__cart-amount-circle-and-text-div"
+            >
               <div class="header__cart-amount-circle-and-text-flex">
                 <img
                   src="/imgs_main_page/header__amount-circle.svg"
@@ -195,6 +204,7 @@
                 class="header__comparison-icon-from1440px"
               />
               <div
+                @click="goToComparisonPage"
                 class="header__comparison-amount-circle-and-text-div-from1440px"
               >
                 <div
@@ -216,7 +226,10 @@
                 class="header__heart-icon-from1440px"
                 @click="goToFavouritesPage"
               />
-              <div class="header__heart-amount-circle-and-text-div-from1440px">
+              <div
+                @click="goToFavouritesPage"
+                class="header__heart-amount-circle-and-text-div-from1440px"
+              >
                 <div
                   class="header__heart-amount-circle-and-text-flex-from1440px"
                 >
@@ -236,7 +249,10 @@
                 alt=""
                 class="header__cart-icon-from1440px"
               />
-              <div class="header__cart-amount-circle-and-text-div-from1440px">
+              <div
+                @click="goToCart"
+                class="header__cart-amount-circle-and-text-div-from1440px"
+              >
                 <div
                   class="header__cart-amount-circle-and-text-flex-from1440px"
                 >
@@ -273,7 +289,10 @@
           class="header__favourites-icon-from320px"
           @click="goToFavouritesPage"
         />
-        <div class="header__heart-amount-circle-and-text-div-from320px">
+        <div
+          @click="goToFavouritesPage"
+          class="header__heart-amount-circle-and-text-div-from320px"
+        >
           <div class="header__heart-amount-circle-and-text-flex-from320px">
             <img
               src="/imgs_main_page/header__amount-circle.svg"
