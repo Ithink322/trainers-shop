@@ -134,14 +134,20 @@
     <button
       @click="addToCart(item)"
       class="container-catalog__card-item-btn-add-to-cart"
+      :data-productId="item.id"
     >
-      <img src="imgs_main_page/thick-cart-icon.svg" alt="" /> Купить
+      <div class="container-catalog__card-item-btn-add-to-cart-non-active">
+        <img src="imgs_main_page/thick-cart-icon.svg" alt="" /> Купить
+      </div>
+      <span class="container-catalog__card-item-btn-add-to-cart-active">
+        В корзине
+      </span>
     </button>
   </div>
 </template>
 
 <script>
-import { mapActions, mapMutations } from "vuex";
+import { mapActions } from "vuex";
 export default {
   name: "CatalogItem",
   props: {
@@ -198,6 +204,38 @@ export default {
         localStorage.setItem("cart", JSON.stringify(cart));
       }
       this.updateTotalQty();
+      this.updateAddToCartButtons();
+    },
+    updateAddToCartButtons() {
+      let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+      let cartItemIds = cartItems.map((product) => product.id);
+      let addToCartBtns = document.querySelectorAll(
+        ".container-catalog__card-item-btn-add-to-cart"
+      );
+
+      addToCartBtns.forEach((addToCartBtn) => {
+        let card = addToCartBtn.closest(".container-catalog__card-item");
+        let activeBtn = card.querySelector(
+          ".container-catalog__card-item-btn-add-to-cart-active"
+        );
+        let nonActiveBtn = card.querySelector(
+          ".container-catalog__card-item-btn-add-to-cart-non-active"
+        );
+
+        let productId = addToCartBtn.getAttribute("data-productId");
+        if (cartItemIds.includes(parseInt(productId))) {
+          activeBtn.style.display = "block";
+          nonActiveBtn.style.display = "none";
+          addToCartBtn.style.color = "#f53b49";
+          addToCartBtn.style.background = "transparent";
+          addToCartBtn.style.border = "1px solid #f53b49";
+        } else {
+          activeBtn.style.display = "none";
+          nonActiveBtn.style.display = "flex";
+          addToCartBtn.style.color = "#fff";
+          addToCartBtn.style.background = "#f53b49";
+        }
+      });
     },
     toggleIconAndAddToFavorites(item) {
       if (this.currentIcon === this.favouriteIconDisabled) {
@@ -440,7 +478,7 @@ export default {
   mounted() {
     this.updateTotalOfFavorites();
     this.updateTotalQty();
-    /* this.updateTotalOfComparisons(); */
+    this.updateAddToCartButtons();
   },
 };
 </script>
@@ -670,8 +708,6 @@ $blue: #4b7ee8;
   .container-catalog__card-item-btn-add-to-cart {
     position: absolute;
     display: flex;
-    align-items: center;
-    gap: 0.625rem;
     border: none;
     background: $red-col;
     padding: 0.75rem;
@@ -684,6 +720,14 @@ $blue: #4b7ee8;
     font-size: 0.875rem;
     font-weight: 700;
     color: $white-col;
+  }
+  .container-catalog__card-item-btn-add-to-cart-non-active {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .container-catalog__card-item-btn-add-to-cart-active {
+    display: none;
   }
 }
 
