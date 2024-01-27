@@ -10,7 +10,10 @@
     </div>
     <h1 class="container-comparison__title">Сравнение</h1>
     <div class="container-comparison__title-border"></div>
-    <button class="container-comparison__arrow-next-btn">
+    <button
+      v-if="comparisons.length > 0"
+      class="container-comparison__arrow-next-btn"
+    >
       <img
         src="imgs_main_page/arrow_red.png"
         alt=""
@@ -115,25 +118,29 @@ export default {
   },
   updated() {
     /* carosusel for .container-comparison__container-items-flex starts */
-    let sliderContainer = this.$refs.comparisonList.$refs.sliderContainer,
+    let sliderContainer = this.$refs.comparisonList
+        ? this.$refs.comparisonList.$refs.sliderContainer
+        : null,
       slides = document.querySelectorAll(".container-comparison__item-title");
     const btnNext = document.querySelector(
       ".container-comparison__arrow-next-btn"
     );
     let currentPos = 0;
-    btnNext.addEventListener("click", () => {
-      let slideIndex = Math.floor(currentPos / -slides[0].offsetWidth);
-      if (slideIndex < 0) {
-        slideIndex = 0;
-      } else if (slideIndex >= slides.length) {
-        slideIndex = slides.length - 1;
+    document.addEventListener("click", function (event) {
+      if (event.target.matches(".container-comparison__arrow-next-btn")) {
+        let slideIndex = Math.floor(currentPos / -slides[0].offsetWidth);
+        if (slideIndex < 0) {
+          slideIndex = 0;
+        } else if (slideIndex >= slides.length) {
+          slideIndex = slides.length - 1;
+        }
+        let slideWidth = slides[slideIndex].offsetWidth + 20;
+        currentPos -= slideWidth;
+        if (currentPos < -slideWidth * (slides.length - 1)) {
+          currentPos = 0;
+        }
+        sliderContainer.style.transform = "translateX(" + currentPos + "px)";
       }
-      let slideWidth = slides[slideIndex].offsetWidth + 20;
-      currentPos -= slideWidth;
-      if (currentPos < -slideWidth * (slides.length - 1)) {
-        currentPos = 0;
-      }
-      sliderContainer.style.transform = "translateX(" + currentPos + "px)";
     });
     /* carosusel for .container-comparison__container-items-flex ends */
   },

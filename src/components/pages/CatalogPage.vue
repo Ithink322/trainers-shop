@@ -1897,7 +1897,7 @@ export default {
         this.selectedManufacturers = [];
       }
     },
-    sortByManufacturer() {
+    /* sortByManufacturer() {
       if (
         this.selectedManufacturers.length > 0 &&
         this.selectedManufacturers.length < 4
@@ -1908,6 +1908,22 @@ export default {
       } else {
         this.sortedItems = this.originalItemsPriceSort;
       }
+    }, */
+    sortByManufacturer() {
+      let filteredByManufacturer = [];
+      if (
+        this.selectedManufacturers.length > 0 &&
+        this.selectedManufacturers.length < 4
+      ) {
+        filteredByManufacturer = this.originalItemsPriceSort.filter((item) =>
+          this.selectedManufacturers.includes(item.manufacturer)
+        );
+      } else {
+        filteredByManufacturer = this.originalItemsPriceSort;
+      }
+      this.sortedItems = this.sortedItems.filter((item) =>
+        filteredByManufacturer.includes(item)
+      );
     },
   },
   mounted() {

@@ -14,7 +14,6 @@
     <favorites-list
       :favorites="favorites"
       @remove-from-favorites="removeFromFavorites"
-      @favoriteStatusChanged="updateFavoriteStatus"
     ></favorites-list>
     <span v-if="favorites.length === 0" class="container-favourites__text-empty"
       >Вы пока не добавили любимые товары в избранное ❤️.</span
