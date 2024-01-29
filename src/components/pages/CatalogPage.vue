@@ -1897,18 +1897,6 @@ export default {
         this.selectedManufacturers = [];
       }
     },
-    /* sortByManufacturer() {
-      if (
-        this.selectedManufacturers.length > 0 &&
-        this.selectedManufacturers.length < 4
-      ) {
-        this.sortedItems = this.originalItemsPriceSort.filter((item) =>
-          this.selectedManufacturers.includes(item.manufacturer)
-        );
-      } else {
-        this.sortedItems = this.originalItemsPriceSort;
-      }
-    }, */
     sortByManufacturer() {
       let filteredByManufacturer = [];
       if (
